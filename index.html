@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Birthday Surprise 🎉</title>
+<meta charset="UTF-8">
+<title>For RANI ❤️</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      color: white;
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  text-align:center;
+  color:white;
+  background:black;
+}
 
-      /* Background image */
-      background: url('images/bg.png') no-repeat center center/cover;
-    }
+.container {
+  margin-top:60px;
+}
 
-    .container {
-      margin-top: 100px;
-    }
+img {
+  width:260px;
+  border-radius:15px;
+  box-shadow:0 0 15px rgba(0,0,0,0.6);
+}
 
-    img {
-      width: 250px;
-      border-radius: 15px;
-      margin: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
+button {
+  margin-top:20px;
+  padding:10px 20px;
+  font-size:16px;
+  border:none;
+  border-radius:10px;
+  background:#ff4d6d;
+  color:white;
+}
 
-    button {
-      padding: 12px 25px;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      background: #ff4d6d;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #ff1e4d;
-    }
-  </style>
+h1 {
+  margin-top:20px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    
-    <!-- Start Image -->
-    <img src="images/photo1.png" alt="start">
+<div class="container">
 
-    <br>
+<h1>For RANI ❤️</h1>
 
-    <!-- Button -->
-    <button onclick="showImage()">Click for Surprise 🎁</button>
+<!-- Start Image -->
+<img id="img" src="Snapchat-1876535519.jpg">
 
-    <br>
+<br>
 
-    <!-- Hidden Image -->
-    <img id="img2" src="images/photo2.png" style="display:none;" alt="surprise">
+<button onclick="next()">Next ❤️</button>
 
-  </div>
+</div>
 
-  <script>
-    function showImage() {
-      document.getElementById("img2").style.display = "block";
-    }
-  </script>
+<!-- 🎵 Music -->
+<audio id="music" src="Ban Ja Rani Tumhari Sulu 128 Kbps.mp3"></audio>
+
+<script>
+let images = [
+"Snapchat-1876535519.jpg",
+"Videoshot_20260310_141541.jpg",
+"Screenshot_20251001-162715.png",
+"Screenshot_20250809-110029.png",
+"Screenshot_20251020-102456.png",
+"Screenshot_20251112-123501.png"
+];
+
+let i = 0;
+
+function next(){
+  i++;
+  if(i < images.length){
+    document.getElementById("img").src = images[i];
+  }
+
+  // music play on first click
+  document.getElementById("music").play();
+}
+</script>
 
 </body>
 </html>
