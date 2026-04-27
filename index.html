@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise 🎉</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+
+      /* Background image */
+      background: url('images/bg.png') no-repeat center center/cover;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 15px;
+      margin: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff1e4d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    
+    <!-- Start Image -->
+    <img src="images/photo1.png" alt="start">
+
+    <br>
+
+    <!-- Button -->
+    <button onclick="showImage()">Click for Surprise 🎁</button>
+
+    <br>
+
+    <!-- Hidden Image -->
+    <img id="img2" src="images/photo2.png" style="display:none;" alt="surprise">
+
+  </div>
+
+  <script>
+    function showImage() {
+      document.getElementById("img2").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
