@@ -5,36 +5,32 @@
 <title>For RANI ❤️</title>
 
 <style>
-body {
-  margin:0;
-  font-family: Arial;
-  text-align:center;
-  color:white;
-  background:black;
+body{
+    margin:0;
+    background:black;
+    color:white;
+    text-align:center;
+    font-family:Arial;
 }
 
-.container {
-  margin-top:60px;
+.container{
+    margin-top:60px;
 }
 
-img {
-  width:260px;
-  border-radius:15px;
-  box-shadow:0 0 15px rgba(0,0,0,0.6);
+img{
+    width:260px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.6);
 }
 
-button {
-  margin-top:20px;
-  padding:10px 20px;
-  font-size:16px;
-  border:none;
-  border-radius:10px;
-  background:#ff4d6d;
-  color:white;
-}
-
-h1 {
-  margin-top:20px;
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d6d;
+    color:white;
+    font-size:16px;
 }
 </style>
 </head>
@@ -42,20 +38,18 @@ h1 {
 <body>
 
 <div class="container">
+    <h1>For RANI ❤️</h1>
 
-<h1>For RANI ❤️</h1>
+    <!-- First Image -->
+    <img id="img" src="Snapchat-1876535519.jpg">
 
-<!-- Start Image -->
-<img id="img" src="Snapchat-1876535519.jpg">
+    <br>
 
-<br>
-
-<button onclick="next()">Next ❤️</button>
-
+    <button onclick="next()">Next ❤️</button>
 </div>
 
-<!-- 🎵 Music -->
-<audio id="music" src="Ban Ja Rani Tumhari Sulu 128 Kbps.mp3"></audio>
+<!-- Music -->
+<audio id="music" src="Ban Ja Rani Tumhari Sulu 128 Kbps.mp3" loop></audio>
 
 <script>
 let images = [
@@ -68,15 +62,19 @@ let images = [
 ];
 
 let i = 0;
+let played = false;
 
 function next(){
-  i++;
-  if(i < images.length){
-    document.getElementById("img").src = images[i];
-  }
+    i++;
+    if(i < images.length){
+        document.getElementById("img").src = images[i];
+    }
 
-  // music play on first click
-  document.getElementById("music").play();
+    // music start only once
+    if(!played){
+        document.getElementById("music").play();
+        played = true;
+    }
 }
 </script>
 
